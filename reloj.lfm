@@ -1,0 +1,91 @@
+object FPrinc: TFPrinc
+  Left = 914
+  Height = 222
+  Top = 346
+  Width = 328
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Reloj NASA'
+  ClientHeight = 222
+  ClientWidth = 328
+  Color = clSkyBlue
+  FormStyle = fsStayOnTop
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.0.8.0'
+  object LCDFecha: TplLCDLine
+    Left = 6
+    Height = 76
+    Top = 8
+    Width = 316
+    CellSize = 4
+    CellSpace = 1
+    FrameSize = 2
+    FrameColor = clSkyBlue
+    BoardColor = clBlue
+    CellColorOn = clWhite
+    CellColorOff = clBlue
+    Text = '11/11/2013'
+  end
+  object LCDHora: TplLCDLine
+    Left = 6
+    Height = 76
+    Top = 83
+    Width = 316
+    CellSize = 3
+    CellSpace = 1
+    FrameSize = 2
+    FrameColor = clSkyBlue
+    BoardColor = clBlue
+    CellColorOn = clWhite
+    CellColorOff = clBlue
+    Text = ' 00:00:00 AM'
+  end
+  object SpeedButton1: TSpeedButton
+    Left = 135
+    Height = 38
+    Top = 160
+    Width = 59
+    Caption = 'OK'
+    NumGlyphs = 0
+    OnClick = SpeedButton1Click
+  end
+  object SpeedButton2: TSpeedButton
+    Left = 299
+    Height = 22
+    Top = 176
+    Width = 23
+    Caption = '?'
+    Font.Style = [fsBold]
+    NumGlyphs = 0
+    OnClick = SpeedButton2Click
+    ParentFont = False
+  end
+  object SBar: TStatusBar
+    Left = 0
+    Height = 23
+    Top = 199
+    Width = 328
+    Panels = <    
+      item
+        Alignment = taCenter
+        Width = 50
+      end>
+    SimplePanel = False
+  end
+  object CBSonido: TCheckBox
+    Left = 21
+    Height = 19
+    Top = 170
+    Width = 57
+    Caption = 'Sonido'
+    Checked = True
+    State = cbChecked
+    TabOrder = 1
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    left = 248
+    top = 160
+  end
+end
